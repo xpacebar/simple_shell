@@ -10,7 +10,7 @@ int execute_command(char *command)
 {
 	pid_t pid = fork();
 	int status;
-	
+
 	if (pid == -1)
 	{
 		perror("Error from fork\n");
