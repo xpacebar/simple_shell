@@ -9,6 +9,7 @@
 int execute_command(char *command)
 {
 	pid_t pid = fork();
+	char *argv[] = {command, NULL};
 	int status;
 
 	if (pid == -1)
@@ -19,7 +20,7 @@ int execute_command(char *command)
 	}
 	if (pid == 0)
 	{
-		execl(command, command, NULL);
+		execve(command, argv, NULL);
 		perror("/shell");
 		exit(EXIT_FAILURE);
 	}
