@@ -25,7 +25,9 @@ int main(int argc, char **argv[])
 		{
 			buff[command - 1] = '\0';
 		}
-		execute_command(buff);
+		char *arg[MAX_BUFF_SIZE];
+		int num_arg = parse_command(buff, arg);
+		execute_command(arg);
 	}
 	free(buff);
 	return (0);

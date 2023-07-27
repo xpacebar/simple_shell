@@ -14,8 +14,8 @@
 #define MAX_COMMAND_LENGTH 100
 
 int display_prompt(void);
-int execute_command(char *command);
-
+int execute_command(char *args[]);
+int parse_command(char *command, char *args[]);
 
 
 
