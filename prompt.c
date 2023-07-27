@@ -7,8 +7,8 @@
 
 int display_prompt(void)
 {
-	char prompt[] = "cisfun$ ";
+	char prompt[] = "#cisfun$ ";
 
-	write(STDIN_FILENO, prompt, 8);
+	write(STDIN_FILENO, prompt, 9);
 	return (0);
 }
